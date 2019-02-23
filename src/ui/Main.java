@@ -1,5 +1,7 @@
 package ui;
 
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import customExceptions.QuotaEnrollExceedException;
@@ -69,7 +71,14 @@ public class Main {
 					System.out.println("Student has been graded");
 				break;
 				case 4:
+					try {
 					System.out.print("The current week has advanced");
+					myCourse.advanceWeek();
+					System.out.println("The current week is: "+myCourse.getCurrentWeek());
+					}
+					catch(Exception e) {
+						System.out.print("Write only number asshole");
+					}
 				break;
 				case 5:
 					System.out.print("Thank you. Bye!");

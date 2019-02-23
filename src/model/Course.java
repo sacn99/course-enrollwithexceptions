@@ -76,4 +76,7 @@ public class Course {
 		
 		return pos;
 	}
+	public int getCurrentWeek() {
+		return currentWeek;
+	}
 }
